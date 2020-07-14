@@ -1,0 +1,26 @@
+
+<html>
+    <head>
+        <h2>Date in different formats</h2>
+    </head>
+
+    <body>
+        <script>
+            var xdate = new Date();
+            var d = xdate.getDate();
+            var m = xdate.getMonth()+1; 
+            var y = xdate.getFullYear();
+         
+            document.write(d+'-'+m+'-'+y);
+            document.write("<br/>");
+            document.write(d+'/'+m+'/'+y);
+
+            document.write("<br/>");
+            document.write("<br/>");
+
+            document.write(m+'-'+d+'-'+y);
+            document.write("<br/>");
+            document.write(m+'/'+d+'/'+y);
+        </script>
+    </body>
+</html>
