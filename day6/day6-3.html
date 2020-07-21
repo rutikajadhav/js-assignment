@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day6-3</title>
+
+    <style>
+        body {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+          }
+          
+        .dark-mode {
+            background-color: black;
+            color: white;
+          }
+    </style>
+</head>
+
+<body>
+    <h4>Make a webpage that will ask the name of the user. Then will display a welcome message on the
+        webpage. Also the webpage should also have a clock.</br>
+        Using the toggle method of classList add a dark mode feature to the website.</h4>
+    
+    <button onclick="myFunction()">Toggle Mode</button>
+    <h2 id="title">Have a good Day, </h2>
+    <div id="clock"></div>
+    
+    <h1><script>
+        var user = prompt("Please enter your name", " ");
+        title.innerHTML +=`${user} !!`;
+
+        function myFunction() { 
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+        }
+
+        function startTime()
+        {
+            var today=new Date();
+            var h=today.getHours();
+            var m=today.getMinutes();
+            var s=today.getSeconds();
+        
+            m=checkTime(m);
+            s=checkTime(s);
+            if(h<12)
+            document.getElementById('clock').innerHTML=h+":"+m+":"+s + " AM";
+            else
+            document.getElementById('clock').innerHTML=h+":"+m+":"+s + " PM";
+            t=setTimeout('startTime()',500);
+            }
+ 
+            function checkTime(i)
+            {
+            if (i<10)
+            {
+                i="0" + i;
+            }
+            return i;
+        }
+    </script></h1>
+    <script type="text/javascript">startTime();</script>
+</body>
+</html>
